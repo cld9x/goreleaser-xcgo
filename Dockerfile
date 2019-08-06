@@ -10,5 +10,7 @@ RUN  wget ${GORELEASER_DOWNLOAD_URL}; \
 			echo "$GORELEASER_SHA $GORELEASER_DOWNLOAD_FILE" | sha256sum -c - || exit 1; \
 			tar -xzf $GORELEASER_DOWNLOAD_FILE -C /usr/bin/ goreleaser; \
 			rm $GORELEASER_DOWNLOAD_FILE;
-			
+
+RUN apt-get update && apt-get install -y gcc-arm-linux-gnueabi g++-arm-linux-gnueabi
+
 CMD ["goreleaser", "-v"]
