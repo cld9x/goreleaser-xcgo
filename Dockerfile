@@ -1,7 +1,7 @@
-FROM dockercore/golang-cross
+FROM dockercore/golang-cross:1.13.15
 
-ENV GORELEASER_VERSION=0.114.0
-ENV GORELEASER_SHA=cbe4dfcbebc7bb191b279aa48a765d2a098f3295a4b5d7b31c99bb6b1acff973
+ENV GORELEASER_VERSION=0.149.0
+ENV GORELEASER_SHA=a227362d734cda47f7ebed9762e6904edcd115a65084384ecfbad2baebc4c775
 
 ENV GORELEASER_DOWNLOAD_FILE=goreleaser_Linux_x86_64.tar.gz
 ENV GORELEASER_DOWNLOAD_URL=https://github.com/goreleaser/goreleaser/releases/download/v${GORELEASER_VERSION}/${GORELEASER_DOWNLOAD_FILE}
